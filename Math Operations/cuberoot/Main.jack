@@ -1,0 +1,31 @@
+class Main {
+    function void main() {
+        var int number, cubeRoot;
+        
+        // Prompt the user to enter a number
+        let number = Keyboard.readInt("Enter a number: ");
+
+        // Calculate the cube root
+        let cubeRoot = CubeRoot.calculateCubeRoot(number);
+
+        // Print the given number
+        do Output.printString("The number is: ");
+        do Output.printInt(number);
+        do Output.println();
+
+        // Print the result
+        if (~(cubeRoot = -1)) {
+            do Output.printString("The cube root of ");
+            do Output.printInt(number);
+            do Output.printString(" is: ");
+            do Output.printInt(cubeRoot);
+            do Output.println();
+        } else {
+            do Output.printString(number);
+            do Output.printString(" is not a perfect cube.");
+            do Output.println();
+        }
+
+        return;
+    }
+}

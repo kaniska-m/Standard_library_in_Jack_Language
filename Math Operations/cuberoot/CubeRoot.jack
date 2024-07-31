@@ -1,0 +1,21 @@
+class CubeRoot {
+    /** 
+     * Calculates the cube root of an integer if it's a perfect cube.
+     * Returns -1 if the number is not a perfect cube.
+     */
+    function int calculateCubeRoot(int n) {
+        var int i;
+
+        let i = 0;
+
+        while ((i * i * i) < n) {
+            let i = i + 1;
+        }
+
+        if ((i * i * i) = n) {
+            return i;
+        } else {
+            return -1; // Indicates that n is not a perfect cube
+        }
+    }
+}

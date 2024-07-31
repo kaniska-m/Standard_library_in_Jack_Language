@@ -1,0 +1,25 @@
+class Main {
+    function void main() {
+        var int x, n, result;
+
+        // Prompt the user to enter the base value
+        let x = Keyboard.readInt("Enter the base value (x): ");
+
+        // Prompt the user to enter the exponent value
+        let n = Keyboard.readInt("Enter the exponent value (n): ");
+
+        // Calculate x to the power of n
+        let result = PowerCalculator.x_to_the_n(x, n);
+
+        // Output the result
+        do Output.printString("The result of ");
+        do Output.printInt(x);
+        do Output.printString(" to the power of ");
+        do Output.printInt(n);
+        do Output.printString(" is ");
+        do Output.printInt(result);
+        do Output.println();
+
+        return;
+    }
+}

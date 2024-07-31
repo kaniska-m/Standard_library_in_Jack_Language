@@ -1,0 +1,26 @@
+class Main {
+    // Main function
+    function void main() {
+        var double side1, side2, hypotenuse;
+
+            // Request and read side1
+            let side1 = Keyboard.readInt("Enter value for side 1: ");
+
+            // Request and read side2
+            let side2 = Keyboard.readInt("Enter value for side 2: ");
+
+            // Calculate the hypotenuse using the Hypotenuse class
+            let hypotenuse = Hypotenuse.calculate(side1, side2);
+
+            // Print the sides and the hypotenuse
+            do Output.printString("Side 1: ");
+            do Output.printInt(side1);
+            do Output.printString(", Side 2: ");
+            do Output.printInt(side2);
+            do Output.printString(", Hypotenuse: ");
+            do Output.printInt(hypotenuse);
+            do Output.println();
+
+        return;
+    }
+}

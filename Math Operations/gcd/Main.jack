@@ -1,0 +1,23 @@
+class Main {
+    function void main() {
+        var int n1, n2, gcd;
+
+        // Prompt the user to enter two integers
+        let n1 = Keyboard.readInt("Enter the first integer: ");
+        let n2 = Keyboard.readInt("Enter the second integer: ");
+
+        // Calculate the GCD
+        let gcd = GCD.calculateGCD(n1, n2);
+
+        // Print the GCD
+        do Output.printString("G.C.D of ");
+        do Output.printInt(n1);
+        do Output.printString(" and ");
+        do Output.printInt(n2);
+        do Output.printString(" is ");
+        do Output.printInt(gcd);
+        do Output.println();
+
+        return;
+    }
+}

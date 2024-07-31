@@ -1,0 +1,21 @@
+// Define a class to contain the x_to_the_n function
+class PowerCalculator {
+
+    // Define the function to calculate x to the power of n
+    function int x_to_the_n(int x, int n) {
+        var int i;      // Variable used in loop counter
+        var int number; // Variable to store the result
+
+        let number = 1; // Initialize number to 1
+
+        // Loop to multiply x, n times
+        let i = 0;
+        while (i < n) {
+            let number = number * x;
+            let i = i + 1;
+        }
+
+        // Return the result
+        return number;
+    }
+}

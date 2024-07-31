@@ -1,0 +1,12 @@
+class Hypotenuse {
+    // This method calculates the hypotenuse of a right triangle given two sides
+    function double calculate(double x, double y) {
+        var double xSquared, ySquared, result;
+        
+        let xSquared = x * x;
+        let ySquared = y * y;
+        let result = Math.sqrt(xSquared + ySquared);
+        
+        return result;
+    }
+}

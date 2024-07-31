@@ -1,0 +1,16 @@
+function Hypotenuse.calculate 3
+push argument 0
+push argument 0
+call Math.multiply 2
+pop local 0
+push argument 1
+push argument 1
+call Math.multiply 2
+pop local 1
+push local 0
+push local 1
+add
+call Math.sqrt 1
+pop local 2
+push local 2
+return
