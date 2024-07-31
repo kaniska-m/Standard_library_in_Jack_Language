@@ -1,230 +1,131 @@
-# Standard-Library-jack
-
 # Jack Standard Library
 
-## Introduction
+## Overview
 
-This initiative aims to enhance the Jack programming language by providing a robust set of data structures and utility functions. Jack, being a low-level object-oriented language, lacks a comprehensive standard library found in more mature languages like Java or Python. Our custom standard library addresses this gap, enabling developers to write more efficient and effective code.
+The **Jack Standard Library** project is a comprehensive effort to extend the Jack programming language by introducing a well-rounded collection of data structures and utility functions. While Jack is a low-level, object-oriented language, it lacks the rich standard libraries available in more mature languages such as Java or Python. This library fills that gap, offering developers the tools they need to write more effective and efficient code within the Jack environment.
 
-## Features
-
-This library includes the following features:
+## Key Features
 
 ### Data Structures
-- List: A dynamic array that can grow or shrink in size.
-- Vector: A resizable array providing efficient index-based access.
-- Queue: A first-in-first-out (FIFO) data structure.
-- Priority Queue (pQueue): A queue where each element has a priority, and higher priority elements are dequeued first.
-- Matrix: A two-dimensional array supporting matrix operations.
-- Binary Search Tree (BST): A tree structure that maintains elements in sorted order.
-- Hash Table: A data structure that maps keys to values for efficient lookups.
-- Set: A collection of unique elements.
+
+The library includes a variety of essential data structures:
+
+1. **List**: A dynamic array that can grow or shrink in size as needed, providing flexibility in memory management.
+   
+2. **Vector**: Similar to a List but optimized for index-based access, allowing for quick retrieval of elements.
+   
+3. **Queue**: A first-in-first-out (FIFO) data structure, ideal for scenarios where the order of elements is important.
+   
+4. **Priority Queue (pQueue)**: An advanced version of the Queue, where each element is associated with a priority. Elements with higher priority are dequeued before those with lower priority.
+   
+5. **Matrix**: A two-dimensional array supporting a variety of matrix operations, essential for mathematical computations.
+   
+6. **Binary Search Tree (BST)**: A tree structure that maintains its elements in a sorted order, facilitating quick search, insertion, and deletion operations.
+   
+7. **Hash Table**: A data structure that maps keys to values, providing efficient lookups, insertions, and deletions.
+   
+8. **Set**: A collection of unique elements, preventing duplicates and allowing for set operations such as union and intersection.
 
 ### Utility Functions
 
+This library also provides a set of utility functions to perform common operations, including:
+
 #### Sorting Algorithms
-- Bubble Sort: A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
-- Insertion Sort: A sorting algorithm that builds the final sorted array one item at a time.
-- Selection Sort: A sorting algorithm that repeatedly selects the smallest (or largest) remaining item and moves it to the correct position.
-- Quick Sort: A highly efficient sorting algorithm that uses a divide-and-conquer approach
+
+1. **Bubble Sort**: A straightforward sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are out of order.
+   
+2. **Insertion Sort**: An algorithm that builds a sorted array one element at a time, making it efficient for small data sets.
+   
+3. **Selection Sort**: A sorting algorithm that repeatedly selects the smallest or largest remaining element and moves it to its correct position in the array.
+   
+4. **Quick Sort**: A highly efficient sorting algorithm that employs a divide-and-conquer strategy to sort elements.
 
 #### String Manipulation
-- String Comparison: Compares two strings lexicographically.
-- toUppercase: Converts all characters in a string to uppercase.
-- toLowercase: Converts all characters in a string to lowercase.
-- String Reversal: Reverses the characters in a string.
+
+1. **String Comparison**: Compares two strings lexicographically to determine their order.
+   
+2. **toUppercase**: Converts all characters in a string to uppercase, standardizing text formatting.
+   
+3. **toLowercase**: Converts all characters in a string to lowercase, useful for case-insensitive comparisons.
+   
+4. **String Reversal**: Reverses the order of characters in a string, useful for certain algorithmic challenges.
 
 #### Mathematical Operations
-- Greatest Common Divisor (GCD): Computes the largest number that divides two integers without leaving a remainder.
-- Exponentiation: Raises a number to the power of an exponent.
-- Finding the Hypotenuse of a Triangle: Calculates the hypotenuse of a right-angled triangle using the Pythagorean theorem.
-- Cube Root Calculation: Computes the cube root of a number.
+
+1. **Greatest Common Divisor (GCD)**: Computes the largest number that divides two integers without leaving a remainder, useful in fraction simplification and number theory.
+   
+2. **Exponentiation**: Raises a base number to the power of an exponent, a fundamental operation in many mathematical formulas.
+   
+3. **Hypotenuse Calculation**: Determines the hypotenuse of a right-angled triangle using the Pythagorean theorem, essential in geometry.
+   
+4. **Cube Root Calculation**: Computes the cube root of a number, important in volume calculations and solving cubic equations.
 
 ## Getting Started
 
 ### Prerequisites
 
-To use the Jack Standard Library, you need:
-- The Jack compiler and virtual machine (VM).
-- Basic understanding of the Jack programming language.
+To use the Jack Standard Library, you need the following:
 
-
-### Execution
-
-# Step-by-Step Instructions for Executing Jack Code and Running the Obtained VM Code
-
-## Prerequisites
-
-1. **Jack Compiler and VM Emulator**: Ensure you have the Jack compiler and VM emulator installed. These are typically provided as part of the NAND2Tetris software suite.
-2. **Jack Code**: Make sure you have your Jack code files ready.
-
-## Step 1: Writing Jack Code
-
-Create your Jack code file(s) with a `.jack` extension. For example, you might have a file named `Main.jack`.
-
-## Step 2: Compiling Jack Code to VM Code
-
-1. **Open the Jack Compiler**: Open the Jack compiler. This can be done using the command line or the graphical interface provided by NAND2Tetris.
-   
-
-2. **Select the Directory**: Choose the directory where your `.jack` files are located. The compiler will process all `.jack` files in the selected directory.
-
-
-
-3. **Compile the Code**: Start the compilation process. The compiler will convert the Jack code into VM code, generating `.vm` files.
-
-### Command Line Compilation
-
-If you are using the command line, navigate to the directory containing your Jack files and run:
-
-```sh
-JackCompiler Main.jack
-```
-
-
-This will generate a `Main.vm` file in the same directory.
-
-   
-## Step 3: Running the VM Code in the VM Emulator
-
-1. **Open the VM Emulator**: Open the VM emulator provided by NAND2Tetris.
-
-
-
-2. **Load the VM Code**: In the VM emulator, load the `.vm` file(s) generated by the compiler.
-
-   - Click on the "Load Program" button.
-   - Navigate to the directory containing the `.vm` files.
-   - Select the appropriate `.vm` file(s). For example, select `BubbleSort.vm` and `Main.vm`.
-
-
-
-3. **Configure the VM Emulator**: Ensure the VM emulator is set up correctly. You may need to configure the memory, CPU, and other settings based on your program requirements.
-
- 
-
-4. **Run the VM Code**: Start the execution of the VM code.
-
-   - You can step through the code line by line using the "Step" button.
-  
-
-
-   - Use the "Run" button to execute the code continuously.
-  
-
-
-### VM Emulator Controls
-
-- **Step**: Executes one VM instruction at a time.
-- **Run**: Continuously runs the VM code until it completes or is manually paused.
-- **Pause**: Pauses the execution of the VM code.
-- **Reset**: Resets the VM emulator to its initial state.
-
-### Example Execution
-
-1. Load the `BubbleSort.vm` and `Main.vm` file.
-2. Configure any necessary initial settings.
-3. Click "Run" to execute the program.
-4. Observe the output and debug as needed.
-
-## Step 4: Debugging and Testing
-
-- Use the VM emulator’s debugging tools to inspect the state of the stack, memory, and registers.
-- Verify the program's output and behavior.
-- Adjust and recompile your Jack code as necessary to achieve the desired results.
-
-    
-   
-By following these steps, you can effectively compile and run all the Jack programs, leveraging the custom standard library to enhance the programming capabilities in the Jack environment.
+- **Jack Compiler and VM Emulator**: These tools are usually part of the NAND2Tetris software suite. Ensure they are installed on your system.
+- **Basic Knowledge of the Jack Programming Language**: Familiarity with Jack syntax and concepts is essential to effectively use the library.
 
 ### Installation
 
-1. Clone the repository to your local machine:
+To install the Jack Standard Library, follow these steps:
+
+1. **Clone the Repository**:
     ```sh
     git clone https://github.com/your-repository/jack-standard-library.git
     ```
 
-2. Navigate to the project directory:
+2. **Navigate to the Project Directory**:
     ```sh
     cd jack-standard-library
     ```
 
-3. Compile the Jack files using the Jack compiler.
+3. **Compile the Jack Files**:
+   Use the Jack compiler to compile the source files within the repository. This will generate the corresponding VM files.
 
-### Usage
+## Execution
 
-After compiling the Jack files, you can include the necessary modules in your Jack programs. Here are examples of how to use some of the provided features:
+### Writing and Compiling Jack Code
 
-#### Example: Using the List Data Structure
+1. **Create Your Jack Code**: Write your Jack programs and save them with a `.jack` extension (e.g., `Main.jack`).
 
-```jack
-class Main {
-    function void main() {
-        var List myList;
-        let myList = List.new();
-        do myList.add(5);
-        do myList.add(10);
-        do myList.remove(0);
-        let myList.get(0);
-        return;
-    }
-}
-```
+2. **Compile the Code**:
+   - **Using the Jack Compiler GUI**:
+     - Open the Jack compiler provided by NAND2Tetris.
+     - Select the directory containing your `.jack` files.
+     - The compiler will process all the files and generate `.vm` files in the same directory.
+   - **Using the Command Line**:
+     - Navigate to the directory containing your Jack files.
+     - Run the following command:
+       ```sh
+       JackCompiler Main.jack
+       ```
+     - This command will generate a `Main.vm` file.
 
-#### Example: Using the Bubble Sort Function
+### Running the VM Code
 
-```jack
-class Main {
-    function void main() {
-        var Array myArray;
-        var int size;
-        let size = 5;
-        let myArray = Array.new(size);
-        let myArray[0] = 5;
-        let myArray[1] = 3;
-        let myArray[2] = 8;
-        let myArray[3] = 4;
-        let myArray[4] = 2;
-        do Sort.bubbleSort(myArray, size);
-        return;
-    }
-}
-```
+1. **Open the VM Emulator**: Launch the VM emulator that comes with the NAND2Tetris suite.
 
-### Documentation
+2. **Load the VM Code**:
+   - In the VM emulator, use the "Load Program" option to load your `.vm` files.
+   - Navigate to the directory containing the `.vm` files and select them (e.g., `Main.vm`).
 
-Detailed documentation for each data structure and utility function is available in the `docs` directory. It includes descriptions, method signatures, and usage examples.
+3. **Configure the VM Emulator**:
+   - Ensure that the emulator's settings (like memory and CPU configuration) are properly adjusted according to your program's requirements.
 
-## Contributing
+4. **Run the Code**:
+   - You can use the "Step" button to execute the code line by line, which is useful for debugging.
+   - Alternatively, use the "Run" button to execute the entire program without interruption.
 
-We welcome contributions to the Jack Standard Library! If you have a feature request, find a bug, or want to add a new data structure or utility function, please open an issue or submit a pull request.
+### Example Execution Workflow
 
-### How to Contribute
+- **Example**: If you have implemented a bubble sort algorithm, compile the `BubbleSort.jack` file and load the resulting `BubbleSort.vm` file into the VM emulator. Then, use the emulator's controls to run and observe the sorting process.
 
-1. Fork the repository.
-2. Create a new branch:
-    ```sh
-    git checkout -b feature/YourFeature
-    ```
-3. Make your changes.
-4. Commit your changes:
-    ```sh
-    git commit -m 'Add some feature'
-    ```
-5. Push to the branch:
-    ```sh
-    git push origin feature/YourFeature
-    ```
-6. Open a pull request.
+### Debugging and Testing
 
-## License
-
-This project is licensed under the MIT License - see the  file for details.
-
-## Acknowledgments
-
-We would like to thank the Jack programming language community for their support and contributions. Your feedback and collaboration are invaluable in making this project a success.
-
----
-
-By building and utilizing this standard library, we aim to significantly expand the capabilities of the Jack programming language, providing developers with essential tools for efficient programming. We hope this project serves as a valuable resource for the Jack community. Happy coding!
+- The VM emulator offers various tools to help you debug your program, such as viewing the stack, memory, and registers.
+- Carefully observe the program's output and behavior to ensure it meets your expectations.
+- If issues are found, modify your Jack code, recompile it, and rerun the tests until the program behaves as desired.
