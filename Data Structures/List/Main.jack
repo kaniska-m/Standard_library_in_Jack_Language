@@ -1,0 +1,29 @@
+class Main
+{
+    function void main ()
+    {
+        var List lista;
+        let lista = List.new();
+
+        do lista.push_back(1);
+        do lista.push_front(2);
+        do lista.push_back(3);
+        do lista.push_front(4);
+        do lista.push_front(5);
+
+        do Output.printString("List after pushing elements: ");
+         do lista.print();
+        do Output.println();
+
+        do lista.insert(6, 2);
+        do Output.printString("List after inserting element 6 at 2nd position: ");
+        do lista.print();
+
+        do lista.clear();
+
+        do lista.print();
+
+        do lista.dispose();
+        return;
+    }
+}

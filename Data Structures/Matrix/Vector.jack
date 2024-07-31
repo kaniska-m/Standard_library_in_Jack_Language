@@ -1,0 +1,162 @@
+class Vector
+{
+    field Array X;
+    field int dim;
+
+    constructor Vector new (int d, bool build_y_n)
+    {
+        let dim = d;
+        let X = Array.new(dim);
+
+        if (build_y_n = true)
+        {        
+            do build_vector();
+        }
+
+        return this;
+    }
+
+    method void build_vector ()
+    {
+        var int i;
+        
+        let i = 0;
+        while (i < dim)
+        {
+            let X[i] = Keyboard.readInt("Build vector: ");
+
+            let i = i + 1;
+        }
+
+        do Output.println();
+
+        return;
+    }
+
+    method int get_dim ()
+    {
+        return dim;
+    }
+
+    method int get (int i)
+    {
+        return X[i];
+    }
+
+    method void set (int i, int element)
+    {
+        let X[i] = element;
+        return;
+    }
+
+    method Vector crossProduct (Vector B)
+    {
+        var int i, j, k;
+        var Vector C;
+        
+        if ((dim = 3) & (B.get_dim() = 3))
+        {
+            let i = (X[0] * B.get(2)) - (X[2] * B.get(1));
+            let j = (X[0] * B.get(2)) - (X[2] * B.get(0));
+            let k = (X[0] * B.get(1)) - (X[1] * B.get(0));
+
+            let C = Vector.new(3, false);
+            do C.set(0, i);
+            do C.set(1, j);
+            do C.set(2, k);
+        }
+
+        return C;
+    }
+
+    method int scalarProduct (Vector B)
+    {
+        var int sum, i;
+        
+        if (dim = B.get_dim())
+        {
+            let i = 0;
+            let sum = 0;
+            while (i < dim)
+            {
+                let sum = sum + (X[i] * B.get(i));
+
+                let i = i + 1;
+            }
+        }
+        else
+        {
+            do Output.printString("Dimensions must be the same!");
+            do Output.println();
+
+            return 0;
+        }
+
+        return sum;
+    }
+
+    method Vector add (Vector B)
+    {
+        var int i;
+        var Vector A;
+        
+        if (dim = B.get_dim())
+        {
+            let A = Vector.new(dim, false);
+            let i = 0;
+            while (i < dim)
+            {
+                do A.set(i, X[i] + B.get(i));
+
+                let i = i + 1;
+            }
+        }
+
+        return A;
+    }
+
+    method Vector sub (Vector B)
+    {
+        var int i;
+        var Vector A;
+        
+        if (dim = B.get_dim())
+        {
+            let A = Vector.new(dim, false);
+            let i = 0;
+            while (i < dim)
+            {
+                do A.set(i, X[i] - B.get(i));
+
+                let i = i + 1;
+            }
+        }
+
+        return A;
+    }
+
+    // l1 norm
+    method int norm ()
+    {
+        var int sum, i;
+        let sum = 0;
+        let i = 0;
+
+        while (i < dim)
+        {
+            let sum = sum + Math.abs(X[i]);
+
+            let i = i + 1;
+        }
+        
+        return sum;
+    }
+
+    method void dispose ()
+    {
+        do X.dispose();
+        do Memory.deAlloc(this);
+
+        return;
+    }
+}
