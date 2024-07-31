@@ -1,0 +1,26 @@
+// Main.jack
+/**
+ * Main class demonstrating the usage of StringUtils.
+ */
+class Main {
+
+    /**
+     * Main function where the execution starts.
+     */
+    function void main() {
+        var String str;
+
+        let str = "EleMents Of CompuTinG 02";
+
+        do Output.printString("Original String: ");
+        do Output.printString(str);
+        do Output.println();
+        // Convert to uppercase
+         do StringOperations.toUpperCase(str);
+        do Output.printString("Uppercase: ");
+        do Output.printString(str);
+        do Output.println();
+
+        return;
+    }
+}

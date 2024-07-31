@@ -1,0 +1,23 @@
+// Main.jack
+/**
+ * Main class demonstrating the usage of StringOperations.
+ */
+class Main {
+
+    /**
+     * Main function where the execution starts.
+     */
+    function void main() {
+        var String str;
+
+        let str = "Original";
+        do Output.printString("Original String: ");
+        do Output.printString(str);
+        // Reverse the string
+        do StringOperations.reverse(str);
+        do Output.println();
+        do Output.printString("Reversed String: ");
+        do Output.printString(str);
+        return;
+    }
+}

@@ -1,0 +1,48 @@
+function StringOperations.toUpperCase 3
+push argument 0
+call String.length 1
+pop local 0
+push constant 0
+pop local 2
+label WHILE_EXP0
+push local 2
+push local 0
+lt
+not
+if-goto WHILE_END0
+push argument 0
+push local 2
+call String.charAt 2
+pop local 1
+push local 1
+push constant 98
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 1
+push constant 122
+gt
+not
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 1
+push constant 32
+sub
+pop local 1
+push argument 0
+push local 2
+push local 1
+call String.setCharAt 3
+pop temp 0
+label IF_FALSE1
+label IF_FALSE0
+push local 2
+push constant 1
+add
+pop local 2
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return

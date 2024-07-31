@@ -1,0 +1,30 @@
+class StringOperations {
+
+    function int strcmp(String s1, String s2) {
+        var int len1;
+        var int len2;
+        var int minLength;
+        var int i;
+        var char c1;
+        var char c2;
+        
+        let len1 = s1.length();
+        let len2 = s2.length();
+        let minLength = len1;
+        if (len2 < len1) {
+            let minLength = len2;
+        }
+
+        let i = 0;
+        while (i < minLength) {
+            let c1 = s1.charAt(i);
+            let c2 = s2.charAt(i);
+            if (~(c1 = c2)) {
+                return c1 - c2;
+            }
+            let i = i + 1;
+        }
+
+        return len1 - len2;
+    }
+}

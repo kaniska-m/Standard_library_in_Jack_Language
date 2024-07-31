@@ -1,0 +1,28 @@
+class Main {
+    function void main() {
+        var String str1, str2, str3, str4;
+        
+        // Test strcmp
+        let str1 = "blue";
+        let str2 = "berry";
+
+        do Output.printString("String 1: ");
+        do Output.printString(str1);
+        do Output.println();
+        do Output.printString("String 2: ");
+        do Output.printString(str2);
+        do Output.println();
+        
+        do Output.printString("Comparison Result: ");
+        // Test strcmp
+        if (StringOperations.strcmp(str1, str2) < 0) {
+            do Output.printString("str1 < str2\n");
+        }
+        if (StringOperations.strcmp(str1, str2) > 0) {
+            do Output.printString("str1 > str2\n");
+        } else {
+            do Output.printString("str1 = str2\n");
+        }
+        return;
+        }
+}

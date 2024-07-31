@@ -1,0 +1,33 @@
+// StringOperations.jack
+/**
+ * Class containing utility functions for string manipulation.
+ */
+class StringOperations {
+
+    /**
+     * Reverses the given string.
+     * @param str - The string to be reversed.
+     * @return The same string with characters in reverse order.
+     */
+    function void reverse(String str) {
+        var int length;
+        var char temp;
+        var int i;
+        var int j;
+
+        let length = str.length();
+        let i = 0;
+        let j = length - 1;
+        
+        while (i < j) {
+            let temp = str.charAt(i);
+            do str.setCharAt(i, str.charAt(j));
+            do str.setCharAt(j, temp);
+            let i = i + 1;
+            let j = j - 1;
+        }
+        
+        return;
+    }
+
+}
