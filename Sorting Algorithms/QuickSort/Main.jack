@@ -1,0 +1,34 @@
+class Main {
+    function void main() {
+        var Array A;
+        var int i;
+
+        let A = Array.new(5);
+
+        let A[0] = 9;
+        let A[1] = 7;
+        let A[2] = 5;
+        let A[3] = 1;
+        let A[4] = 3;
+
+        do Output.printString("Original Array: ");
+        do Main.printArray(A, 5);
+
+        do Output.printString("Quick sort: ");
+        do QuickSort.quick(A, 5);
+        do Main.printArray(A, 5);
+        return;
+    }
+
+    function void printArray(Array A, int n) {
+        var int i;
+        let i = 0;
+        while (i < n) {
+            do Output.printInt(A[i]);
+            do Output.printChar(32); // print space
+            let i = i + 1;
+        }
+        do Output.println(); // print newline
+        return;
+    }
+}

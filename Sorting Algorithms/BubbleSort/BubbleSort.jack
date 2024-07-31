@@ -1,0 +1,26 @@
+class BubbleSort {
+    function void bubble(Array A, int n) {
+        var int i, j, temp;
+        var boolean swapped;
+
+        let i = 0;
+        while (i < (n - 1)) {  // Ensuring correct bounds
+            let swapped = false;
+            let j = 0;
+            while (j < (n - 1 - i)) {  // Reduce comparison range each pass
+                if (A[j] > A[j + 1]) {
+                    let temp = A[j];
+                    let A[j] = A[j + 1];
+                    let A[j + 1] = temp;
+                    let swapped = true;
+                }
+                let j = j + 1;
+            }
+            if (~swapped) {
+                return;
+            }
+            let i = i + 1;
+        }
+        return;
+    }
+}

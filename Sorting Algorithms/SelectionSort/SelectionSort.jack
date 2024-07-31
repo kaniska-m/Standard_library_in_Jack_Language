@@ -1,0 +1,22 @@
+class SelectionSort {
+    function void selection(Array A, int n) {
+        var int i, j, minIndex, temp;
+
+        let i = 0;
+        while (i < n) {
+            let minIndex = i;
+            let j = i + 1;
+            while (j < n) {
+                if (A[j] < A[minIndex]) {
+                    let minIndex = j;
+                }
+                let j = j + 1;
+            }
+            let temp = A[i];
+            let A[i] = A[minIndex];
+            let A[minIndex] = temp;
+            let i = i + 1;
+        }
+        return;
+    }
+}
